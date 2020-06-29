@@ -59,6 +59,9 @@
                                                 <state key="normal" title="Click to ask">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="askButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tqY-KP-Jd9"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -87,6 +90,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageBall" destination="8Uc-tI-sjF" id="fHU-Uv-hNF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
