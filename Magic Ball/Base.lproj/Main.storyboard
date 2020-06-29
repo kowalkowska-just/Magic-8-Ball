@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,91 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic_Ball" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="GlG-DJ-SgH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" id="RLW-Tm-5vM">
+                                <rect key="frame" x="0.0" y="40" width="414" height="818"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2a-0j-e76" userLabel="View1">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="259.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASK ME ANYTHING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymO-0k-hQB">
+                                                <rect key="frame" x="39.5" y="107.5" width="335.5" height="44.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
+                                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ymO-0k-hQB" firstAttribute="centerX" secondItem="M2a-0j-e76" secondAttribute="centerX" id="8gH-nm-A93"/>
+                                            <constraint firstItem="ymO-0k-hQB" firstAttribute="centerY" secondItem="M2a-0j-e76" secondAttribute="centerY" id="Qpn-o4-AmY"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JIU-wH-toq" userLabel="View2">
+                                        <rect key="frame" x="0.0" y="279.5" width="414" height="259"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="8Uc-tI-sjF">
+                                                <rect key="frame" x="54.5" y="-7" width="305" height="273.5"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8Uc-tI-sjF" firstAttribute="centerX" secondItem="JIU-wH-toq" secondAttribute="centerX" id="HcO-0J-0ff"/>
+                                            <constraint firstItem="8Uc-tI-sjF" firstAttribute="centerY" secondItem="JIU-wH-toq" secondAttribute="centerY" id="W3k-Uq-dU9"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FWN-pf-leR" userLabel="View3">
+                                        <rect key="frame" x="0.0" y="558.5" width="414" height="259.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfg-Ud-z7R">
+                                                <rect key="frame" x="131" y="105.5" width="152" height="49"/>
+                                                <viewLayoutGuide key="safeArea" id="fAd-c5-MLe"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                                <state key="normal" title="Click to ask">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Xfg-Ud-z7R" firstAttribute="centerX" secondItem="FWN-pf-leR" secondAttribute="centerX" id="372-PS-9WN"/>
+                                            <constraint firstItem="Xfg-Ud-z7R" firstAttribute="centerY" secondItem="FWN-pf-leR" secondAttribute="centerY" id="j1C-Fx-7fL"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lvc-kc-fey" firstAttribute="trailing" secondItem="M2a-0j-e76" secondAttribute="trailing" id="H9H-pc-e4t"/>
+                                    <constraint firstItem="JIU-wH-toq" firstAttribute="leading" secondItem="lvc-kc-fey" secondAttribute="leading" id="LuM-c3-ARz"/>
+                                    <constraint firstItem="M2a-0j-e76" firstAttribute="leading" secondItem="lvc-kc-fey" secondAttribute="leading" id="eyq-rk-4zn"/>
+                                    <constraint firstItem="FWN-pf-leR" firstAttribute="leading" secondItem="lvc-kc-fey" secondAttribute="leading" id="hz7-ja-3OT"/>
+                                    <constraint firstItem="lvc-kc-fey" firstAttribute="trailing" secondItem="FWN-pf-leR" secondAttribute="trailing" id="l5L-lL-fvq"/>
+                                    <constraint firstItem="JIU-wH-toq" firstAttribute="trailing" secondItem="lvc-kc-fey" secondAttribute="trailing" id="yBQ-fw-u5a"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="lvc-kc-fey"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GlG-DJ-SgH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BOW-RL-NC3"/>
+                            <constraint firstAttribute="bottom" secondItem="GlG-DJ-SgH" secondAttribute="bottom" id="FVE-IE-5Dq"/>
+                            <constraint firstItem="GlG-DJ-SgH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IHU-jN-Ne8"/>
+                            <constraint firstItem="GlG-DJ-SgH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KdM-qS-w9e"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="529" height="748.33331298828125"/>
+        <image name="ball1" width="305" height="273.5"/>
+    </resources>
 </document>
